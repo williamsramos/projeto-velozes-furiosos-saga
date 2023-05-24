@@ -1,0 +1,241 @@
+body{
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.8em;
+    color: #000;
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5, .pimg6, .pimg7, .pimg8, .pimg9, .pimg10, .pimg11 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url(/src/img/VF1.jpg);
+    min-height: 400px;
+}
+
+.pimg2{
+    background-image: url(/src/img/Brian\ O´Conner\ e\ Roman\ VF2.jpg);
+    min-height: 400px;
+}
+
+.pimg3{
+    background-image: url(/src/img/VF3.jpg);
+    min-height: 400px;
+}
+.pimg4{
+    background-image: url(/src/img/Vf4.jpeg);
+    min-height: 400px;
+}
+.pimg5{
+    background-image: url(/src/img/Vf5\ Operacao\ Rio.jpg);
+    min-height: 400px;
+}
+
+.pimg6{
+    background-image: url(/src/img/VF6.jpg);
+    min-height: 400px;
+}
+
+.pimg7{
+    background-image: url(/src/img/Brian\ O´Conner\ VF7\ ultimo\ filme.jpg);
+    min-height: 400px;
+}
+
+.pimg8{
+    background-image: url(/src/img/Torreto\ vf8.jpg);
+    min-height: 400px;
+}
+
+.pimg9{
+    background-image: url(/src/img/retorno_de_Han_vf9.jpg);
+    min-height: 400px;
+}
+
+.pimg10{
+    background-image: url(/src/img/VF10.jpg);
+    min-height: 400px;
+}
+
+.pimg11{
+    background-image: url(/src/img/VfHobbs&shaw.jpg);
+    min-height: 400px;
+}
+
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #fff;
+}
+
+.ptexto {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptexto .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptexto .border.trans {
+    background-color: transparent;
+}
+
+.border .border.trans {
+    visibility: hidden;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    display: inline-block;
+    background-attachment: fixed;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a{
+    color: #f3f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+#link-topo{
+    text-decoration: none;
+    color: #ffff;
+    background-color: rgb(239, 4, 4);
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+@media (max-width: 568px) {
+    .pimg1, .pimg2, 
+    .pimg3, .pimg4,
+    .pimg5, .pimg6,
+    .pimg7 , .pimg8 ,
+    .pimg9 {
+        background-attachment:scroll;
+    } 
+
+    .section{
+        text-align: center;
+        padding: 50px 80px;
+    }
+    
+    .section-light {
+        background-color: #f4f4f4;
+        color: #666;
+    }
+    
+    .section-dark {
+        background-color: #282e34;
+        color: #ddd;
+    }
+
+    .card {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+        font-size: 13px;
+    }
+}
